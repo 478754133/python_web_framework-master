@@ -26,8 +26,21 @@ class TestCreatSettle:
 
     def test_creatsettle_success(self, start_session):
         logger.info("执行 {0} 测试用例 ".format(sys._getframe().f_code.co_name))
-        logger.info("创建阴极铜销售出库单测试用例 ")
+        logger.info("创建阴极铜销售结算单测试用例 ")
         # 前置  访问登录页面
         # 步骤  新建销售订单
         # 断言  审批状态是否为审批通过
         start_session[1].creatsalesettle()
+
+    def test_savesalesettle_success(self,start_session):
+        logger.info("执行 {0} 测试用例 ".format(sys._getframe().f_code.co_name))
+        logger.info("保存阴极铜销售结算单测试用例 ")
+        # 前置  访问登录页面
+        # 步骤  新建销售订单
+        # 断言  审批状态是否为审批通过
+        start_session[1].savesalesettle()
+
+
+
+
+

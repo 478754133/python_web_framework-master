@@ -965,3 +965,108 @@
 2023-05-06 17:10:59,265 - root - INFO - 登录功能-正常测试-正常截图截图成功，图片路径为: D:\Python_Project\python_web_framework-master\OutPuts\image\登录功能-正常测试-正常截图_2023-05-06_17_10_58.png
 2023-05-06 17:11:03,228 - root - INFO - ==========结束执行测试用例集===========
 2023-05-06 17:11:03,229 - root - INFO - ==========结束贸易项目 测试===========
+2023-05-06 17:26:05,014 - root - INFO - ==========开始贸易项目 执行测试===========
+2023-05-06 17:26:06,198 - root - INFO - ==========开始执行测试用例集===========
+2023-05-06 17:26:06,199 - root - INFO - -------------------------------------<selenium.webdriver.chrome.webdriver.WebDriver (session="9173c5329d438a88913c5117f2520759")>
+2023-05-06 17:26:08,178 - root - INFO - 登录页面_登录功能,页面元素:('css selector', 'input[placeholder="账号"]') 输入值 00005907
+2023-05-06 17:26:08,196 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="账号"]'):可见，共耗时0s 
+2023-05-06 17:26:08,197 - root - INFO - 登录页面_登录功能,查找页面元素:('css selector', 'input[placeholder="账号"]')
+2023-05-06 17:26:08,210 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="账号"]'):可见，共耗时0s 
+2023-05-06 17:26:08,259 - root - INFO - 登录页面_登录功能,页面元素:('css selector', 'input[placeholder="密码"]') 输入值 a123456
+2023-05-06 17:26:08,274 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="密码"]'):可见，共耗时0s 
+2023-05-06 17:26:08,274 - root - INFO - 登录页面_登录功能,查找页面元素:('css selector', 'input[placeholder="密码"]')
+2023-05-06 17:26:08,285 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="密码"]'):可见，共耗时0s 
+2023-05-06 17:26:08,331 - root - INFO - 登录页面_登录功能,点击页面元素:('css selector', 'button[class="el-button el-button--primary el-button--medium"]')
+2023-05-06 17:26:08,332 - root - INFO - 登录页面_登录功能,查找页面元素:('css selector', 'button[class="el-button el-button--primary el-button--medium"]')
+2023-05-06 17:26:08,345 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'button[class="el-button el-button--primary el-button--medium"]'):可见，共耗时0s 
+2023-05-06 17:26:11,026 - root - INFO - 执行 test_creatsettle_success 测试用例 
+2023-05-06 17:26:11,026 - root - INFO - 创建阴极铜销售出库单测试用例 
+2023-05-06 17:26:14,039 - root - INFO - 销售管理,点击页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:26:14,040 - root - INFO - 销售管理,查找页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:26:14,056 - root - INFO - 销售管理,等待页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span'):可见，共耗时0s 
+2023-05-06 17:26:14,164 - root - INFO - 销售订单管理,点击页面元素:('xpath', '//span[text()="销售订单管理"]')
+2023-05-06 17:26:14,165 - root - INFO - 销售订单管理,查找页面元素:('xpath', '//span[text()="销售订单管理"]')
+2023-05-06 17:26:14,707 - root - INFO - 销售订单管理,等待页面元素:('xpath', '//span[text()="销售订单管理"]'):可见，共耗时0s 
+2023-05-06 17:26:15,099 - root - INFO - 返回订单号,获取页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span')
+2023-05-06 17:26:16,691 - root - INFO - 返回订单号,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span'):可见，共耗时1s 
+2023-05-06 17:26:16,692 - root - INFO - 返回订单号,查找页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span')
+2023-05-06 17:26:16,704 - root - INFO - 返回订单号,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span'):可见，共耗时0s 
+2023-05-06 17:26:16,721 - root - INFO - 返回客户名称,获取页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span')
+2023-05-06 17:26:16,737 - root - INFO - 返回客户名称,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span'):可见，共耗时0s 
+2023-05-06 17:26:16,737 - root - INFO - 返回客户名称,查找页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span')
+2023-05-06 17:26:16,750 - root - INFO - 返回客户名称,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span'):可见，共耗时0s 
+2023-05-06 17:26:19,772 - root - INFO - 销售管理,点击页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:26:19,773 - root - INFO - 销售管理,查找页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:26:19,785 - root - INFO - 销售管理,等待页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span'):可见，共耗时0s 
+2023-05-06 17:26:19,814 - root - INFO - 销售订单管理,点击页面元素:('xpath', '//span[text()="销售订单管理"]')
+2023-05-06 17:26:19,815 - root - INFO - 销售订单管理,查找页面元素:('xpath', '//span[text()="销售订单管理"]')
+2023-05-06 17:26:19,832 - root - INFO - 销售订单管理,等待页面元素:('xpath', '//span[text()="销售订单管理"]'):可见，共耗时0s 
+2023-05-06 17:26:19,965 - root - INFO - 返回订单号,获取页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span')
+2023-05-06 17:26:19,986 - root - INFO - 返回订单号,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span'):可见，共耗时0s 
+2023-05-06 17:26:19,986 - root - INFO - 返回订单号,查找页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span')
+2023-05-06 17:26:20,001 - root - INFO - 返回订单号,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[2]/div/span'):可见，共耗时0s 
+2023-05-06 17:26:20,019 - root - INFO - 返回客户名称,获取页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span')
+2023-05-06 17:26:20,034 - root - INFO - 返回客户名称,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span'):可见，共耗时0s 
+2023-05-06 17:26:20,035 - root - INFO - 返回客户名称,查找页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span')
+2023-05-06 17:26:20,052 - root - INFO - 返回客户名称,等待页面元素:('xpath', '//div[3]/table/tbody/tr[1]/td[3]/div/span'):可见，共耗时0s 
+2023-05-06 17:26:23,074 - root - INFO - 选择销售管理,点击页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:26:23,075 - root - INFO - 选择销售管理,查找页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:26:23,086 - root - INFO - 选择销售管理,等待页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span'):可见，共耗时0s 
+2023-05-06 17:26:23,113 - root - INFO - 选择结算管理,点击页面元素:('xpath', '(//span[text()="结算管理"])[1]')
+2023-05-06 17:26:23,115 - root - INFO - 选择结算管理,查找页面元素:('xpath', '(//span[text()="结算管理"])[1]')
+2023-05-06 17:26:23,655 - root - INFO - 选择结算管理,等待页面元素:('xpath', '(//span[text()="结算管理"])[1]'):可见，共耗时0s 
+2023-05-06 17:26:23,689 - root - INFO - 选择结算单新增,点击页面元素:('xpath', '(//span[text()="结算单新增"])[1]')
+2023-05-06 17:26:23,690 - root - INFO - 选择结算单新增,查找页面元素:('xpath', '(//span[text()="结算单新增"])[1]')
+2023-05-06 17:26:24,236 - root - INFO - 选择结算单新增,等待页面元素:('xpath', '(//span[text()="结算单新增"])[1]'):可见，共耗时0s 
+2023-05-06 17:26:24,272 - root - INFO - 选择无点价结算新增,点击页面元素:('xpath', '//span[text()="无点价结算新增"]')
+2023-05-06 17:26:24,272 - root - INFO - 选择无点价结算新增,查找页面元素:('xpath', '//span[text()="无点价结算新增"]')
+2023-05-06 17:26:24,818 - root - INFO - 选择无点价结算新增,等待页面元素:('xpath', '//span[text()="无点价结算新增"]'):可见，共耗时0s 
+2023-05-06 17:26:28,308 - root - INFO - ==========结束执行测试用例集===========
+2023-05-06 17:26:28,309 - root - INFO - ==========结束贸易项目 测试===========
+2023-05-06 17:27:05,891 - root - INFO - ==========开始贸易项目 执行测试===========
+2023-05-06 17:27:07,064 - root - INFO - ==========开始执行测试用例集===========
+2023-05-06 17:27:07,065 - root - INFO - -------------------------------------<selenium.webdriver.chrome.webdriver.WebDriver (session="ab3751cb948e1fb1400e7c88333c044d")>
+2023-05-06 17:27:09,389 - root - INFO - 登录页面_登录功能,页面元素:('css selector', 'input[placeholder="账号"]') 输入值 00005907
+2023-05-06 17:27:09,408 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="账号"]'):可见，共耗时0s 
+2023-05-06 17:27:09,408 - root - INFO - 登录页面_登录功能,查找页面元素:('css selector', 'input[placeholder="账号"]')
+2023-05-06 17:27:09,420 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="账号"]'):可见，共耗时0s 
+2023-05-06 17:27:09,467 - root - INFO - 登录页面_登录功能,页面元素:('css selector', 'input[placeholder="密码"]') 输入值 a123456
+2023-05-06 17:27:09,480 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="密码"]'):可见，共耗时0s 
+2023-05-06 17:27:09,482 - root - INFO - 登录页面_登录功能,查找页面元素:('css selector', 'input[placeholder="密码"]')
+2023-05-06 17:27:09,492 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'input[placeholder="密码"]'):可见，共耗时0s 
+2023-05-06 17:27:09,538 - root - INFO - 登录页面_登录功能,点击页面元素:('css selector', 'button[class="el-button el-button--primary el-button--medium"]')
+2023-05-06 17:27:09,538 - root - INFO - 登录页面_登录功能,查找页面元素:('css selector', 'button[class="el-button el-button--primary el-button--medium"]')
+2023-05-06 17:27:09,551 - root - INFO - 登录页面_登录功能,等待页面元素:('css selector', 'button[class="el-button el-button--primary el-button--medium"]'):可见，共耗时0s 
+2023-05-06 17:27:12,172 - root - INFO - 执行 test_saleoutbound_success 测试用例 
+2023-05-06 17:27:12,172 - root - INFO - 创建阴极铜销售出库单测试用例 
+2023-05-06 17:27:16,186 - root - INFO - 销售管理,点击页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:27:16,187 - root - INFO - 销售管理,查找页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span')
+2023-05-06 17:27:16,203 - root - INFO - 销售管理,等待页面元素:('css selector', 'i[class="iconfont aside-icon icon-caidanlan-xiaoshouguanli"]+span'):可见，共耗时0s 
+2023-05-06 17:27:16,239 - root - INFO - 发货单管理,点击页面元素:('xpath', '//span[text()="发货单管理"]')
+2023-05-06 17:27:16,240 - root - INFO - 发货单管理,查找页面元素:('xpath', '//span[text()="发货单管理"]')
+2023-05-06 17:27:16,772 - root - INFO - 发货单管理,等待页面元素:('xpath', '//span[text()="发货单管理"]'):可见，共耗时0s 
+2023-05-06 17:27:19,143 - root - INFO - 第一个下拉,点击页面元素:('css selector', 'div.el-table__fixed-right > div.el-table__fixed-body-wrapper > table > tbody > tr:nth-child(1) > td.el-table_1_column_25.operator > div > div > span > i')
+2023-05-06 17:27:19,144 - root - INFO - 第一个下拉,查找页面元素:('css selector', 'div.el-table__fixed-right > div.el-table__fixed-body-wrapper > table > tbody > tr:nth-child(1) > td.el-table_1_column_25.operator > div > div > span > i')
+2023-05-06 17:27:19,261 - root - INFO - 第一个下拉,等待页面元素:('css selector', 'div.el-table__fixed-right > div.el-table__fixed-body-wrapper > table > tbody > tr:nth-child(1) > td.el-table_1_column_25.operator > div > div > span > i'):可见，共耗时0s 
+2023-05-06 17:27:19,809 - root - INFO - 点击出库,点击页面元素:('xpath', '/html/body/ul/li[4]/span')
+2023-05-06 17:27:19,810 - root - INFO - 点击出库,查找页面元素:('xpath', '/html/body/ul/li[4]/span')
+2023-05-06 17:27:19,830 - root - INFO - 点击出库,等待页面元素:('xpath', '/html/body/ul/li[4]/span'):可见，共耗时0s 
+2023-05-06 17:27:22,154 - root - INFO - 选择第一个圆点客户,点击页面元素:('xpath', '//div[2]/table/tbody/tr/td[1]/div/label/span[1]/span')
+2023-05-06 17:27:22,155 - root - INFO - 选择第一个圆点客户,查找页面元素:('xpath', '//div[2]/table/tbody/tr/td[1]/div/label/span[1]/span')
+2023-05-06 17:27:22,171 - root - INFO - 选择第一个圆点客户,等待页面元素:('xpath', '//div[2]/table/tbody/tr/td[1]/div/label/span[1]/span'):可见，共耗时0s 
+2023-05-06 17:27:22,252 - root - INFO - 选中出货数量,页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input') 输入值 ('\ue009', 'a')
+2023-05-06 17:27:22,275 - root - INFO - 选中出货数量,等待页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input'):可见，共耗时0s 
+2023-05-06 17:27:22,276 - root - INFO - 选中出货数量,查找页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input')
+2023-05-06 17:27:22,291 - root - INFO - 选中出货数量,等待页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input'):可见，共耗时0s 
+2023-05-06 17:27:22,337 - root - INFO - 填写出货数量,页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input') 输入值 2
+2023-05-06 17:27:22,354 - root - INFO - 填写出货数量,等待页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input'):可见，共耗时0s 
+2023-05-06 17:27:22,354 - root - INFO - 填写出货数量,查找页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input')
+2023-05-06 17:27:22,370 - root - INFO - 填写出货数量,等待页面元素:('xpath', '//div[3]/table/tbody/tr/td[2]/div/div/div/div/input'):可见，共耗时0s 
+2023-05-06 17:27:22,408 - root - INFO - 提交,点击页面元素:('xpath', "(//button/span[text()='提交'])")
+2023-05-06 17:27:22,408 - root - INFO - 提交,查找页面元素:('xpath', "(//button/span[text()='提交'])")
+2023-05-06 17:27:22,425 - root - INFO - 提交,等待页面元素:('xpath', "(//button/span[text()='提交'])"):可见，共耗时0s 
+2023-05-06 17:27:22,477 - root - INFO - 点击确定,点击页面元素:('xpath', "//button/span[text()=' 确定 ']")
+2023-05-06 17:27:22,478 - root - INFO - 点击确定,查找页面元素:('xpath', "//button/span[text()=' 确定 ']")
+2023-05-06 17:27:22,497 - root - INFO - 点击确定,等待页面元素:('xpath', "//button/span[text()=' 确定 ']"):可见，共耗时0s 
+2023-05-06 17:27:25,557 - root - INFO - ==========结束执行测试用例集===========
+2023-05-06 17:27:25,558 - root - INFO - ==========结束贸易项目 测试===========
