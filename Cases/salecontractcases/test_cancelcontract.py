@@ -28,7 +28,7 @@ class TestCancelConstract():
     # 正常用例
     @pytest.mark.lucas
     # 删除列表第一个合同
-    def test_cancelsaleconstract(self,start_session):
+    def test_cancelsalecontract(self, start_session):
         SaleConstractPage(start_session[0]).enterinterface()
         SaleConstractPage(start_session[0]).cancelconstract()
         try:

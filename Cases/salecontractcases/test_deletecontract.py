@@ -28,7 +28,7 @@ class TestDelateConstract():
     # 正常用例
     @pytest.mark.lucas
     # 删除列表第一个合同
-    def test_deletesaleconstract(self,start_session):
+    def test_deletesalecontract(self, start_session):
         SaleConstractPage(start_session[0]).deleteconstract()
         try:
             assert IndexPage(start_session[0]).isExist_deletesucess_prompt()

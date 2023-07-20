@@ -6,9 +6,11 @@ class LoginPage(BasePage):
 
     # 登录
     def login(self, username, password):
+        vcode = str(input("请输入验证码:"))
         doc = '登录页面_登录功能'
         self.input_element(loc.username_loc, username, doc)
         self.input_element(loc.password_loc, password, doc)
+        self.input_element(loc.vcode_loc,vcode,doc)
         self.click_element(loc.login_btn_loc, doc)
 
     # 获取错误提示

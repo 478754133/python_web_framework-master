@@ -36,12 +36,14 @@ def project_session_start():
 def project_module_start():
     logger.info("==========开始测试模块 执行测试===========")
     global driver
-
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option('detach', True)
+    driver = webdriver.Chrome(options=options)
+    #driver = webdriver.Chrome()
     driver.implicitly_wait(10)
     driver.maximize_window()
     yield driver
-    driver.quit()
+    #driver.quit()
     logger.info("==========结束测试模块 测试===========")
 
 

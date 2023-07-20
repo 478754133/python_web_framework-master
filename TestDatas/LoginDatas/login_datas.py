@@ -1,5 +1,5 @@
 # 正常场景测试数据
-success_data = {'name': '登录功能-正常测试', 'username': '00005907', 'password': 'a123456'}
+success_data = {'name': '登录功能-正常测试', 'username': '00005907', 'password': 'Jxtr!2023'}
 
 # 异常场景测试 - username
 error_usernameFormat_data = [

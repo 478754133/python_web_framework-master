@@ -1,8 +1,8 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from Locators.IndexLocators.index_locators import IndexLocator as loc
-from Locators.SaleConstractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators
-from Locators.SaleConstractionManagementLocators.saleConstract_creat_locators import SaleContractCreatLocators
+from Locators.SaleContractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators
+from Locators.SaleContractionManagementLocators.saleContract_creat_locators import SaleContractCreatLocators
 
 
 class IndexPage:

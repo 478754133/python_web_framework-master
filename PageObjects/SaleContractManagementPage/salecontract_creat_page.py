@@ -1,7 +1,7 @@
-from Locators.SaleConstractionManagementLocators.saleConstract_creat_locators import SaleContractCreatLocators as loc
+from Locators.SaleContractionManagementLocators.saleContract_creat_locators import SaleContractCreatLocators as loc
 from Common.plugs.basepage import BasePage
 from Locators.IndexLocators.index_locators import IndexLocator
-from Locators.SaleConstractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators
+from Locators.SaleContractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators
 import pytest
 import time
 import json
@@ -15,6 +15,17 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from Common.plugs.get_log import Log
+from Common.plugs.get_config import r_config
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+print(BASE_DIR)
+if sys.platform == "win32":
+    conf_dir = os.path.join(BASE_DIR, 'Common/config/config.ini').replace('/', '\\')
+else:
+    conf_dir = os.path.join(BASE_DIR, 'Common/config/config.ini')
+log_dir = r_config(conf_dir, "log", "log_path")
+logger = Log(log_dir)
 
 
 #新建销售合同界面对象操作方法及业务
@@ -45,7 +56,8 @@ class SaleConstractCreatPage(BasePage):
     #填写非标准合同业务(阴极铜) 可以手动维护
     def creatsaleconstract_1(self):
         salename = "测试_{0}".format(self.now_time)
-        time.sleep(5)
+        constractno = "WF{0}".format(self.now_time)
+        time.sleep(3)
         self.click_element(IndexLocator.constractmanagement_tag,doc='合同管理')
         self.click_element(IndexLocator.constractmanagement_saleconstract_tag,doc='销售合同')
         self.click_element(IndexLocator.constractmanagement_saleconstract_sub1_tag,doc='销售合同管理')
@@ -54,36 +66,30 @@ class SaleConstractCreatPage(BasePage):
         time.sleep(2)
         self.input_element(loc.constractname_loc,salename,doc='填写合同名称')
         self.input_element(loc.constractyear_end_loc, "2024", doc='填写合同年份')
-        self.click_element(loc.businesstype_loc,doc='下拉业务类型')
-        self.click_element(loc.businesstype_1_loc,doc='一般国内贸易')
-        self.click_element(loc.ordertype_loc,doc='下拉订单类型')
-        self.click_element(loc.ordertype_1_loc, doc='产品销售')
-        self.click_element(loc.currency_loc,doc='选择币种')
-        self.click_element(loc.currency_1_loc,doc='RMB')
+        self.select_listcontent(loc.businesstype_loc,loc.businesstypelist_loc,"一般国内贸易",doc='一般国内贸易')
+        self.select_listcontent(loc.ordertype_loc,loc.ordertypelist_loc,"产品销售",doc='选择产品销售')
+        self.select_listcontent(loc.currency_loc,loc.currencylist_loc,"人民币元",doc="人民币")
         self.input_element(loc.constractduration_start_loc,"2023-01-01",doc='合同有效期开始时间')
         self.input_element(loc.constractduration_start_loc, Keys.ENTER, doc='合同有效期开始时间确定')
         self.input_element(loc.constractduration_end_loc, "2023-12-30", doc='合同有效期结束时间')
         self.input_element(loc.constractduration_end_loc, Keys.ENTER, doc='合同有效期结束时间确定')
         self.click_element(loc.collectionterms_loc,doc='收款条件下拉')
-        self.click_element(loc.collectionterms_1_loc,doc='货到付款')
+        self.click_element(loc.collectiontermslist_loc,doc='货到付款')
         self.input_element(loc. collectiontermsexplain_loc,"收款条件测试",doc='填写收款说明')
         self.click_element(loc.paymentmethod_loc,doc='收款方式下拉')
         self.click_element(loc.paymentmethod_1_loc,doc='电汇')
-        self.input_element(loc.contractnumberother_loc,"123456789",doc='填写对方合同号')
         self.click_element(loc.productiontype_loc,doc='产品类型选择')
         self.click_element(loc.productiontype_1_loc, doc='阴极铜')
-        self.click_element(loc.constracttype_loc,doc='合同类型选择')
-        self.click_element(loc.constracttype_1_loc, doc='零单合同')
-        time.sleep(1)
-        self.click_element(loc.standardtype_loc,doc='标准类型选择')
-        self.click_element(loc.standardtype_1_loc,doc='非标准合同')
+        self.click_element(loc.constracttype_loc,doc='合同类型下拉')
+        self.click_element(loc.constracttype_1_loc, doc='合同类型选择零单合同')
+        # self.select_listcontent(loc.constracttype_loc,loc.constracttypelist_loc,"零单合同",doc="合同类型选择零单合同")
 
-        self.click_element(loc.createdepartment_loc,doc='创建部门选择')
-        self.click_element(loc.createdepartment_1_loc, doc='多金属部门')
+
+
+        self.select_listcontent(loc.standardtype_loc, loc.standardtypelist_loc, "非标准合同", doc='标准类型选择')
         time.sleep(1)
-        self.input_element(loc.cutomer_loc,"上海五锐金属集团有限公司",doc='客户信息选择')
-        #客户信息确认
-        self.driver.find_element(By.XPATH, "/html/body/div[15]/div[1]/div[1]/ul/li[2]/span").click()
+        self.input_element(loc.contractnumberother_loc, constractno, doc='填写我方合同号')
+        self.select_listcontent(loc.customer_loc,loc.customerlist_loc,"上海五锐金属集团有限公司",doc='客户信息确认')
         self.click_element(loc.addproductioninfo_loc, doc='新增产品信息')
         self.click_element(loc.materialcode_loc,doc='物料选择')
         self.click_element(loc.materialcode_table_loc, doc='物料选择阴极铜')

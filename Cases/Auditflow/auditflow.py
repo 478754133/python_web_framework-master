@@ -62,7 +62,7 @@ class Auto_approve:
 
     #登录所有账号
     def autologin(self):
-        acountList = list = pd.read_excel(self.conf_dir, dtype="string", usecols=[0, 1, 2]).values.tolist()
+        acountList = pd.read_excel(self.conf_dir, dtype="string", usecols=[0, 1, 2]).values.tolist()
         for i in range(len(acountList)):
             print('当前账户为：', acountList[i][0])
             username = acountList[i][1]

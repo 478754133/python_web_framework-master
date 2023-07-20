@@ -27,7 +27,7 @@ class TestCreatConstract:
     @pytest.mark.lucas
     @pytest.mark.smoke
     #新建合同并保存
-    def test_savesaleconstract_success(self, start_session):
+    def test_savesalecontract_success(self, start_session):
 
         logger.info("执行 {0} 测试用例 ".format(sys._getframe().f_code.co_name))
         logger.info("创建阴极铜销售合同测试用例 ")
@@ -40,6 +40,7 @@ class TestCreatConstract:
 
             assert IndexPage(start_session[0]).isExist_operatesucess_prompt()
             logger.info(" 结束执行 {0} 测试用例， 测试结果 --- PASS ".format(sys._getframe().f_code.co_name))
+            time.sleep(1)
             start_session[1].save_pictuer("新建合同成功-正常截图")
         except:
             logger.error(" 结束执行 {0} 测试用例， 测试结果 --- False ".format(sys._getframe().f_code.co_name))
@@ -47,7 +48,7 @@ class TestCreatConstract:
             raise
 
     #新建合同并审批通过
-    def test_approvesaleconstract_success(self, start_session):
+    def test_approvesalecontract_success(self, start_session):
 
         logger.info("执行 {0} 测试用例 ".format(sys._getframe().f_code.co_name))
         logger.info("创建阴极铜销售合同测试用例 ")

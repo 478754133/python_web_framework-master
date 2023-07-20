@@ -1,9 +1,9 @@
 import time
 
-from Locators.SaleConstractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators as loc
+from Locators.SaleContractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators as loc
 from Common.plugs.basepage import BasePage
 from selenium.webdriver.support import expected_conditions as EC
-from Locators.SaleConstractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators
+from Locators.SaleContractionManagementLocators.saleContractManagement_locators import SaleContractManagementLocators
 from selenium.webdriver.support.wait import WebDriverWait
 from Locators.IndexLocators.index_locators import IndexLocator
 class SaleConstractPage(BasePage):
