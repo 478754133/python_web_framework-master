@@ -74,20 +74,16 @@ class PurchaseConstractCreatPage(BasePage):
         self.input_element(loc.constractduration_start_loc, Keys.ENTER, doc='合同有效期开始时间确定')
         self.input_element(loc.constractduration_end_loc, "2023-12-30", doc='合同有效期结束时间')
         self.input_element(loc.constractduration_end_loc, Keys.ENTER, doc='合同有效期结束时间确定')
-        # self.click_element(loc.collectionterms_loc,doc='付款条件下拉')
-        # self.click_element(loc.collectiontermslist_loc,doc='货到付款')
+
         self.select_listcontent(loc.collectionterms_loc,loc.collectiontermslist_loc, "货到付款", doc='付款条件选择货到付款')
-        # self.click_element(loc.paymentmethod_loc,doc='收款方式下拉')
-        # self.click_element(loc.paymentmethod_1_loc,doc='电汇')
+
         self.select_listcontent(loc.paymentmethod_loc,loc.paymentmethodlist_loc,"支票","收款方式选择支票")
-        # self.click_element(loc.productiontype_loc,doc='产品类型选择')
-        # self.click_element(loc.productiontype_1_loc, doc='阴极铜')
+
         self.select_listcontent(loc.productiontype_loc,loc.productiontypelist_loc,"国内原料",doc='产品类型选择国内原料')
         time.sleep(1)
         self.select_listcontent(loc.receivinglocation_loc,loc.receivinglocationlist_loc,"铜精矿",doc='收单地点选择铜精矿')
         time.sleep(1)
-        # self.click_element(loc.constracttype_loc,doc='合同类型下拉')
-        # self.click_element(loc.constracttype_1_loc, doc='合同类型选择零单合同')
+
         self.select_listcontent(loc.constracttype_loc,loc.constracttypelist_loc,"零单合同",doc="合同类型选择零单合同")
 
         self.select_listcontent(loc.standardtype_loc, loc.standardtypelist_loc, "非标准合同", doc='标准类型选择')
@@ -121,6 +117,7 @@ class PurchaseConstractCreatPage(BasePage):
     #保存非标准合同业务(阴极铜)
     def savepurchaseconstract(self):
         self.creatpurchaseconstract_1()
+        time.sleep(1)
         self.click_element(loc.savebtn_loc, doc='保存')
 
     #提交合同审批通过(测试用)
