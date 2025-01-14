@@ -22,7 +22,7 @@ log_dir = r_config(conf_dir, "log", "log_path")
 logger = Log(log_dir)
 
 
-@pytest.mark.usefixtures('start_session')
+@pytest.mark.usefixtures('start_ses sion')
 @pytest.mark.usefixtures('refresh_page')
 class TestCancelConstract():
     # 正常用例

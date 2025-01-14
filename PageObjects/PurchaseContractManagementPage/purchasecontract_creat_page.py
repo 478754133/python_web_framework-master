@@ -57,7 +57,7 @@ class PurchaseConstractCreatPage(BasePage):
     def creatpurchaseconstract_1(self):
         purchasename = "测试_{0}".format(self.now_time)
         constractno = "WF{0}".format(self.now_time)
-        time.sleep(2)
+        time.sleep(3)
         self.get("http://yantaitrade.jxcc.com/contract/contract-manange/purchase-list")
         # self.click_element(IndexLocator.constractmanagement_tag,doc='合同管理')
         # self.click_element(IndexLocator.constractmanagement_purchaseconstract_tag,doc='销售合同')

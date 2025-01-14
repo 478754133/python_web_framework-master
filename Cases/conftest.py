@@ -37,9 +37,12 @@ def project_module_start():
     logger.info("==========开始测试模块 执行测试===========")
     global driver
     options = webdriver.ChromeOptions()
+    options.binary_location = "D:\\chrome-win64\\chrome.exe"  # 指定chrome位置
+    #os.environ["webdriver.chrome.driver"] = "D:\\tools\\chromedriver.exe"  # 指定chrome驱动位置
     options.add_experimental_option('detach', True)
+    options.add_argument("disable-cache")  # 禁用缓存
+    options.add_experimental_option("excludeSwitches",['enable-automation'])  # 隐藏“正由自动化软件控制”提示
     driver = webdriver.Chrome(options=options)
-    #driver = webdriver.Chrome()
     driver.implicitly_wait(10)
     driver.maximize_window()
     yield driver
