@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.service import Service
 import time
 import pandas as pd
 from getconfig import GetAuditInfo
@@ -27,9 +28,12 @@ SECRET_KEY = 'g83CsuPwchhvBYBdOYlTjTEmJ0y5v99L'
 def ocrcode(src_url):
     url = "https://aip.baidubce.com/rest/2.0/ocr/v1/handwriting?access_token=" + get_access_token()
 
+
     # image 可以通过 get_file_content_as_base64("C:\fakepath\code.png",True) 方法获取
-    #payload= "image=" + get_file_content_as_base64(imagepath, True)
-    payload = "image=" + src_url + '&detect_direction=false&probability=false&detect_alteration=false'
+
+    payload = 'image=' + src_url + '&detect_direction=false&probability=false&detect_alteration=false'
+
+
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json'
@@ -102,12 +106,21 @@ class Auto_approve:
         options = webdriver.ChromeOptions()
         options.add_experimental_option('detach', True)
         options.binary_location = "D:\\chrome-win64\\chrome.exe"  # 指定chrome位置
-        #os.environ["webdriver.chrome.driver"] = "D:\\tools\\chromedriver.exe"  # 指定chromedriver驱动位置
+        # os.environ["webdriver.chrome.driver"] = "D:\\tools\\chromedriver.exe"  # 指定chromedriver驱动位置
         options.add_argument("disable-cache")  # 禁用缓存
+        # 关闭阻止不安全的连接
+        options.add_argument("disable-web-security")
+        options.add_argument("allow-running-insecure-content")
+        options.add_argument("ignore-certificate-errors")
         options.add_experimental_option("excludeSwitches",['enable-automation', 'enable-logging'])  # 隐藏“正由自动化软件控制”提示，不打印driver日志
         options.add_experimental_option("useAutomationExtension", False)  # 隐藏“正由自动化软件控制”提示
+        #关闭密码弹窗
+        prefs = {}
+        prefs['credentials_enable_service'] = False
+        prefs['profile.password_manager_enabled'] = False
+        options.add_experimental_option('prefs', prefs)
 
-        driver = webdriver.Chrome(options=options)
+        driver = webdriver.Chrome(options=options, service=Service(executable_path='D:\\tools\\chromedriver.exe'))
         driver.set_window_size(1200, 800)
         driver.implicitly_wait(10)
 
@@ -116,11 +129,11 @@ class Auto_approve:
             driver.get(test_url)
             code_element= driver.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/form/div[3]/div[2]/img')
             img_src = code_element.get_attribute('src')
-            # 找到 "base64," 的位置
-            base64_index = img_src.find("base64,") + len("base64,")
-            # 提取 Base64 编码的部分
-            base64_data = img_src[base64_index:]
-            src_url = urllib.parse.quote_plus(base64_data)
+            # # 找到 "base64," 的位置
+            # base64_index = img_src.find("base64,") + len("base64,")
+            # # 提取 Base64 编码的部分
+            # base64_data = img_src[base64_index:]
+            src_url = urllib.parse.quote(img_src, safe='%')
             code = ocrcode(src_url)
             vcode = str(code)
 
@@ -128,8 +141,8 @@ class Auto_approve:
                 driver.find_element(By.CSS_SELECTOR, 'input[placeholder="请输入用户名"]').send_keys(username)
             if password is not None:
                 driver.find_element(By.CSS_SELECTOR, 'input[placeholder="请输入密码"]').send_keys(password)
-            driver.find_element(By.CSS_SELECTOR, 'input[placeholder="请输入验证码"]').send_keys(vcode)
-            driver.find_element(By.CSS_SELECTOR,'button[class="el-button el-button--primary el-button--medium"]').click()
+                driver.find_element(By.CSS_SELECTOR, 'input[placeholder="请输入验证码"]').send_keys(vcode)
+                driver.find_element(By.CSS_SELECTOR,'button[class="el-button el-button--primary el-button--medium"]').click()
 
             if self.login_status_error(driver):
                 print('验证码错误，请重新输入')
